@@ -1,0 +1,171 @@
+{
+    "version": 5,
+    "model_name": "Jibay_NSFW-1",
+    "model_name_sha256": "d9bcc777c8d51af7f0baaeabdfc9101d90626fa4eb895e4fc0757a1b0a4b054b",
+    "analyzer_revision": "white-neutral-guard-v2",
+    "mode": 1,
+    "endpoint": {
+        "source_parameter": "url",
+        "allow_get_mode_override": true,
+        "allow_debug_output": true
+    },
+    "storage": {
+        "directory": "storage/moderated",
+        "public_prefix": "storage/moderated",
+        "filename_prefix": "moderated_",
+        "jpeg_quality": 91
+    },
+    "limits": {
+        "max_file_bytes": 12582912,
+        "max_image_pixels": 40000000,
+        "download_timeout_seconds": 20,
+        "analysis_max_side": 420
+    },
+    "analysis": {
+        "explicit_threshold": 0.66500000000000003552713678800500929355621337890625,
+        "skin_mask_threshold": 0.51500000000000001332267629550187848508358001708984375,
+        "soft_skin_threshold": 0.3850000000000000088817841970012523233890533447265625,
+        "minimum_component_ratio": 0.001000000000000000020816681711721685132943093776702880859375,
+        "morphology_iterations": 1,
+        "adaptive_white_balance": true,
+        "topology_grid_size": 5,
+        "consensus_bonus_max": 0.040000000000000000832667268468867405317723751068115234375,
+        "white_pixel_threshold": 0.57999999999999996003197111349436454474925994873046875,
+        "neutral_pixel_threshold": 0.6999999999999999555910790149937383830547332763671875,
+        "chromatic_skin_threshold": 0.2800000000000000266453525910037569701671600341796875,
+        "minimum_skin_ratio_for_explicit": 0.055000000000000000277555756156289135105907917022705078125,
+        "minimum_chromatic_skin_ratio": 0.0320000000000000006661338147750939242541790008544921875,
+        "minimum_positive_votes": 3,
+        "white_garment_guard": true,
+        "tone_profiles": [
+            {
+                "name": "porcelain_neutral",
+                "cb": 104.0,
+                "cr": 150.0,
+                "sigma_cb": 13.5,
+                "sigma_cr": 15.0
+            },
+            {
+                "name": "light_neutral",
+                "cb": 106.0,
+                "cr": 151.0,
+                "sigma_cb": 14.5,
+                "sigma_cr": 16.0
+            },
+            {
+                "name": "light_warm",
+                "cb": 99.0,
+                "cr": 162.0,
+                "sigma_cb": 16.0,
+                "sigma_cr": 18.0
+            },
+            {
+                "name": "golden",
+                "cb": 105.0,
+                "cr": 158.0,
+                "sigma_cb": 17.5,
+                "sigma_cr": 18.5
+            },
+            {
+                "name": "medium_neutral",
+                "cb": 111.0,
+                "cr": 155.0,
+                "sigma_cb": 17.0,
+                "sigma_cr": 19.0
+            },
+            {
+                "name": "olive",
+                "cb": 107.0,
+                "cr": 145.0,
+                "sigma_cb": 17.0,
+                "sigma_cr": 16.5
+            },
+            {
+                "name": "brown",
+                "cb": 116.0,
+                "cr": 151.0,
+                "sigma_cb": 18.5,
+                "sigma_cr": 19.5
+            },
+            {
+                "name": "deep_brown",
+                "cb": 121.0,
+                "cr": 146.0,
+                "sigma_cb": 20.0,
+                "sigma_cr": 20.0
+            },
+            {
+                "name": "deep_cool",
+                "cb": 126.0,
+                "cr": 139.0,
+                "sigma_cb": 20.0,
+                "sigma_cr": 20.0
+            },
+            {
+                "name": "very_deep",
+                "cb": 125.0,
+                "cr": 141.0,
+                "sigma_cb": 21.0,
+                "sigma_cr": 21.0
+            },
+            {
+                "name": "rosy",
+                "cb": 103.0,
+                "cr": 169.0,
+                "sigma_cb": 17.5,
+                "sigma_cr": 18.5
+            },
+            {
+                "name": "mixed_warm_cool",
+                "cb": 113.0,
+                "cr": 158.0,
+                "sigma_cb": 20.0,
+                "sigma_cr": 21.0
+            },
+            {
+                "name": "low_light_mixed",
+                "cb": 121.0,
+                "cr": 149.0,
+                "sigma_cb": 22.0,
+                "sigma_cr": 22.0
+            }
+        ],
+        "weights": {
+            "coverage": 0.184999999999999997779553950749686919152736663818359375,
+            "large_regions": 0.1350000000000000088817841970012523233890533447265625,
+            "body_span": 0.08500000000000000610622663543836097232997417449951171875,
+            "centrality": 0.059999999999999997779553950749686919152736663818359375,
+            "anatomical_patterns": 0.2250000000000000055511151231257827021181583404541015625,
+            "multi_person_activity": 0.0950000000000000011102230246251565404236316680908203125,
+            "texture": 0.040000000000000000832667268468867405317723751068115234375,
+            "soft_skin": 0.025000000000000001387778780781445675529539585113525390625,
+            "component_quality": 0.055000000000000000277555756156289135105907917022705078125,
+            "spatial_topology": 0.07499999999999999722444243843710864894092082977294921875
+        }
+    },
+    "processing": {
+        "blur_radius": 22.0,
+        "blur_sigma": 12.0,
+        "pixelate_before_blur": true,
+        "pixel_size": 22,
+        "strip_metadata": true
+    },
+    "tokens": {
+        "enabled": true,
+        "file": "tokens.json",
+        "max_entries": 1000,
+        "similarity_enabled": true,
+        "max_hamming_distance": 5,
+        "max_score_adjustment": 0.01600000000000000033306690738754696212708950042724609375,
+        "only_use_high_confidence_neighbors": true
+    },
+    "security": {
+        "allowed_schemes": [
+            "http",
+            "https"
+        ],
+        "allow_private_networks": false,
+        "allow_redirects": false,
+        "user_agent": "Jibay_NSFW-1/5.0"
+    }
+}
